@@ -21,6 +21,15 @@ char Maze [Mazeheight][Mazewidth] {
 const char Wall = "#";
 const char Free = " ";
 const char Mazerunner = "*" ; 
+class COORD
+{
+public:
+    int X;
+    int Y;
+    COORD(int x = 0, int y = 0) { X = x, Y = y; }
+    COORD(const COORD &coord) { X = coord.X; Y = coord.Y; }
+};
+
 COORD StartingPoint(1, 0);
 COORD EndingPoint(7, 8);
 
